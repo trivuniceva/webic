@@ -7,6 +7,7 @@
       <p>First Name: {{ user.firstName }}</p>
       <p>Last Name: {{ user.lastName }}</p>
       <p>Date of Birth: {{ user.dateOfBirth }}</p>
+
 <!--      <p>Profile Picture: <img :src="user.profilePicture" alt="Profile Picture" /></p>-->
     </div>
 
