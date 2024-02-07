@@ -6,6 +6,7 @@ export default createStore({
         loggedIn: false,
         user: {
             username: '',
+            password: '',
             email: '',
             firstName: '',
             lastName: '',

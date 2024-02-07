@@ -40,6 +40,7 @@ export default {
           this.$store.commit('setUser', {
             username: response.data.username,
             email: response.data.email,
+            password: response.data.password,
             firstName: response.data.firstName,
             lastName: response.data.lastName,
             dateOfBirth: response.data.dateOfBirth,

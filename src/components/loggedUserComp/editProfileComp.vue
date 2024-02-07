@@ -126,15 +126,23 @@ export default {
 
   methods: {
     async submitForm() {
+
+      console.log("---->>>>>>>>>>")
+      console.log(this.user.gender, this.user.role, this.user.password)
+      console.log("---->>>>>>>>>>")
+
       try {
         this.errors = {}; // Resetujte poruke o greškama
 
         const formData = {
+          username: this.user.username || '',
+          password: this.user.password || '',
           email: this.user.email || '',
           firstName: this.user.firstName || '',
           lastName: this.user.lastName || '',
           dateOfBirth: this.user.dateOfBirth || '',
           gender: this.user.gender || '',
+          role: this.user.role || '',
           profilePicture: this.user.profilePicture || '',
           posts: this.user.posts || '',
           pictures: this.user.pictures || '',
@@ -155,11 +163,12 @@ export default {
           },
         });
 
-        if (response.data.success) {
+        if (response && response.data && response.data.success) {
           this.successMessage = 'Profile successfully updated!';
         } else {
           console.error('Izmena profila nije uspela.');
         }
+
       } catch (error) {
         console.error('Došlo je do greške prilikom izmene profila:', error);
 
