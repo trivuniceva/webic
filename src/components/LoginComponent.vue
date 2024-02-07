@@ -39,15 +39,18 @@ export default {
           this.$store.commit('setLoggedIn', true);
           this.$store.commit('setUser', {
             username: response.data.username,
+            email: response.data.email,
             firstName: response.data.firstName,
             lastName: response.data.lastName,
             dateOfBirth: response.data.dateOfBirth,
+            gender: response.data.gender,
+            role: response.data.role,
             profilePicture: response.data.profilePicture,
-
-
-
-            // Dodajte ostale podatke prema potrebi
-
+            posts: response.data.posts,
+            pictures: response.data.pictures,
+            friendRequests: response.data.friendRequests,
+            friendList: response.data.friendList,
+            privateAccount: response.data.privateAccount,
           });
 
           this.$router.push('/userProfileView');

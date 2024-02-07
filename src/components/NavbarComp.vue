@@ -67,4 +67,19 @@ export default {
   padding: 1em;
 }
 
+select {
+  border: 0px solid #ccc;
+  border-radius: 10px;
+  padding: 8px;
+  margin: 10px 0;
+  width: 17%;
+  box-sizing: border-box;
+
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
 </style>

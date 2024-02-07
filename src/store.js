@@ -6,11 +6,18 @@ export default createStore({
         loggedIn: false,
         user: {
             username: '',
+            email: '',
             firstName: '',
             lastName: '',
             dateOfBirth: '',
+            gender: '',
+            role: '',
             profilePicture: '',
-            // Dodajte ostale podatke prema potrebi
+            posts: '',
+            pictures: '',
+            friendRequests: '',
+            friendList: '',
+            privateAccount: '',
         },
 
     },
