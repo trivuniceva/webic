@@ -14,6 +14,7 @@ import messagesLogged from "@/components/loggedUserComp/messagesLoggedComp.vue";
 import searchLoggedComp from "@/components/loggedUserComp/searchLoggedComp.vue";
 import editProfileComp from "@/components/loggedUserComp/editProfileComp.vue";
 import changePasswordComp from "@/components/loggedUserComp/changePasswordComp.vue";
+import notificationsLoggedComp from "@/components/loggedUserComp/notificationsLoggedComp.vue";
 
 const routes = [
     { path: '/', component: HomepageComponent },
@@ -21,9 +22,11 @@ const routes = [
     { path: '/signup', component: SignUpView },
     { path: '/searchUsers', component: SearchUsersComponent },
     { path: '/userProfileView', component: userProfileViewComponent },
-    { path: '/homeLogged', component:  homeLoggedComp},
-    { path: '/searchLogged', component: searchLoggedComp},
-    { path: '/messagesLogged', component:  messagesLogged},
+
+    { path: '/home', component:  homeLoggedComp},
+    { path: '/search', component: searchLoggedComp},
+    { path: '/messages', component:  messagesLogged},
+    { path: '/notifications', component:  notificationsLoggedComp},
     { path: '/editProfile', component: editProfileComp },
     { path: '/changePassword', component: changePasswordComp},
 ];

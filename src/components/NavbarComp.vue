@@ -7,11 +7,10 @@
     </nav>
 
     <nav v-else>
-      <!-- Dodajte linkove za ulogovanog korisnika -->
-      <router-link to="/homeLogged">Home</router-link> |
-      <router-link to="/searchLogged">Search</router-link> |
-      <router-link to="/messagesLogged">Messages</router-link> |
-      <router-link to="/notificationsLogged">Notifications</router-link> |
+      <router-link to="/home">Home</router-link> |
+      <router-link to="/search">Search</router-link> |
+      <router-link to="/messages">Messages</router-link> |
+      <router-link to="/notifications">Notifications</router-link> |
 
       <select @change="handleDropdownChange">
         <option value="profile">Profile</option>
@@ -34,29 +33,29 @@ export default {
     ...mapState(['loggedIn']),
   },
 
-  handleDropdownChange(event) {
-    const selectedOption = event.target.value;
-    // Implementirajte logiku za obradu izabrane opcije
-    // Na primer, možete koristiti Vue Router za redirekciju
-    switch (selectedOption) {
-      case "profile":
-        this.$router.push("/userProfileView");
-        break;
-      case "editProfile":
-        this.$router.push("/editProfile");
-        break;
-      case "changePassword":
-        this.$router.push("/changePassword");
-        break;
-      case "logout":
-        this.$store.commit("setLoggedIn", false);
-        this.$router.push("/");
-        break;
-      default:
-        // Dodajte dodatnu logiku prema potrebi
-        break;
+  methods: {
+    handleDropdownChange(event) {
+      const selectedOption = event.target.value;
+      switch (selectedOption) {
+        case "profile":
+          this.$router.push("/userProfileView");
+          break;
+        case "editProfile":
+          this.$router.push("/editProfile");
+          break;
+        case "changePassword":
+          this.$router.push("/changePassword");
+          break;
+        case "logout":
+          this.$store.commit("setLoggedIn", false);
+          this.$router.push("/");
+          break;
+        default:
+          // Dodajte dodatnu logiku prema potrebi
+          break;
       }
     },
+  },
 };
 </script>
 
